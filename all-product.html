@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Farza Company</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="csrf-token" content="{{ csrf_token() }}" />
+
+  <!-- Favicons -->
+  <link href="img/Farza.png" rel="icon" />
+  <link href="img/Farza.png" rel="apple-touch-icon" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- {{-- <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /> --}} -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.css" />
+
+  <!-- {{-- <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"> --}}
+      {{-- <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"> --}} -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" />
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+  <!-- {{-- <link rel="stylesheet" href="https://resources/demos/style.css"> --}} -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.12/sweetalert2.min.css" />
+
+  <!-- {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> --}} -->
+
+  <link rel="stylesheet" href="fontawesome/arrow-up-from-bracket-solid.svg" />
+  <link href="Css/sheet.css" rel="stylesheet" />
+</head>
+
+<body>
+
+
+  <header>
+    <div class="header-fixed">
+      <!-- {{-- <div class="head">
+                    <div class="container">
+                        <div class="head-container">
+                            <div class="frist">
+                                <span>عربي</span>
+                                <span>My delivery area: Cairo</span>
+                            </div>
+                            <div class="second">
+                                <span>Sell on Farza </span>
+                                <span><i class="fas fa-phone"></i> Call 19966</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> --}} -->
+      <!-- //////////////////////////////////////////////////////////////// -->
+      <nav class="navbar navbar-expand-lg header">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="img/Farza.png" class="img-fluid" />
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="">
+              <i class="fa-solid fa-bars text-info"></i>
+            </span>
+          </button>
+          <div class="menu collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="navbar-nav mb-2 mb-lg-0">
+              <div class="nav-item ">
+                <a class="nav-link active fs-tt" style="color:#0471b3;" aria-current="page"
+                  href="index.html"><b>Home</b></a>
+              </div>
+            </div>
+            <div class="navbar-nav mb-2 mb-lg-0 w-25 col-12">
+              <div class="nav-item ">
+                <a class="nav-link active fs-tt clo-6 " aria-current="page" href="all-product.html"><b>All
+                    Product</b></a>
+              </div>
+
+              <!-- {{-- <div class="nav-item ">
+                                    <a class="nav-link active fs-tt clo-6" aria-current="page" href="#"><b>Everyday Deals</b></a>
+                                </div> --}} -->
+            </div>
+            <form class="d-flex w-100  position-relative" action="{{url('product_search_view')}}" method="POST">
+
+              <input class="form-control p-3" name="search_product" id="search_product" type="search"
+                placeholder="Search for Product or brands" aria-label="Search">
+              <!-- {{-- <i class="fa-solid fa-magnifying-glass position-absolute translate-middle end-0 top-50 p-2"></i> --}} -->
+              <button class="form-control p-3 " style="width: 10%"> <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+            <div class="d-flex acc align-itmes-center w-50 ">
+              <div class="cart-conect me-2">
+                <a href="cart.html" style="text-decoration: none; ">
+                  <i class="fa-solid fa-cart-shopping fa-shake fa-xl" style="padding-bottom: 2px;"></i>
+                  <span class="cart-count bg-primary">5</span>
+                </a>
+              </div>
+              <div class="cart-conect me-2">
+
+                <a href="account.html" title="ayman" style="text-decoration: none; ">
+
+                  <i class="fa-solid fa-user fa-xl"></i>
+                </a>
+              </div>
+              <!-- {{-- <div class="cart-conect me-2">
+                                    <a href="{{url('cart-item')}}" style="text-decoration: none; ">
+                                        <a href="">sunin</a> / <a href="">Sinup</a>
+                                        <span class="cart-count bg-primary"></span>
+                                    </a>
+                                </div>
+                                <div class="cart-conect me-2">
+                                    <a href="{{url('cart-item')}}" style="text-decoration: none; ">
+                                        <a href="">my account</a> 
+                                        <span class="cart-count bg-primary"></span>
+                                    </a>
+                                </div> --}} -->
+
+              <nav class="top-nav">
+                <div class="menu-wrapper shadow-lg bg-body rounded">
+                  <div class="menu row justify-content-center">
+
+                    <div class="col-12">
+                      <div class="m-auto mb-3" style="display: grid; justify-content: center;">
+                        <img src="img/Farza.png" width="70px" height="70px" alt="">
+                      </div>
+
+                      <div class="border  p-3 mb-3">
+                        <span> <b>Address:</b>pla pla pla </span><br>
+                        <span> <b>Email:</b>pla@gmail.com </span><br>
+                        <span> <b>Phone:</b>01273352186 </span><br>
+                        <span> <b>WhatsApp:</b>01273352186 </span><br>
+                      </div>
+
+                      <div class="col-12 m-auto p-3 mb-3" style="display: grid; justify-content: center;">
+                        <ul>
+                          <li style="display: inline-block; padding: 5px;">
+                            <a href=""><i class="fa-brands fa-facebook fa-xl" style="color: #0471b3;"></i></a>
+                          </li>
+
+                          <li style="display: inline-block; padding: 5px;">
+                            <a href=""><i class="fa-brands fa-square-instagram fa-xl" style="color: #0471b3;"></i></a>
+                          </li>
+                          <li style="display: inline-block; padding: 5px;">
+                            <a href=""><i class="fa-brands fa-youtube fa-xl" style="color: #0471b3;"></i></a>
+                          </li>
+                          <li style="display: inline-block; padding: 5px;">
+                            <a href=""><i class="fa-brands fa-linkedin fa-xl" style="color: #0471b3;"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+
+
+                      <div class="m-auto" style="display: grid; justify-content: center;">
+
+                        <div class="col-12">
+
+                          <a href="{{ url('admin/dashboard') }}"
+                            class="text-decoration-none m-2 fw-bold text-dark">Dashboard</a>
+
+                          <form method="POST" action="{{ route('logout') }}">
+
+                            <span><Button class="btn btn-link text-decoration-none m-2 fw-bold text-dark"
+                                type="submit"><i class="fa-solid fa-arrow-right-from-bracket fa-lg"
+                                  style="color: #0471b3;"></i> Sign Out</Button></span>
+                          </form>
+                        </div>
+
+                        <a href="{{ route('login') }}" class="text-decoration-none m-2 fw-bold text-dark"> <i
+                            class="fa-solid fa-arrow-right-to-bracket" style="color: #0471b3;"></i> Sign in</a>
+
+
+                        <a href="{{ route('register') }}" class="text-decoration-none m-2 fw-bold text-dark"> <i
+                            class="fa-solid fa-user-plus" style="color: #0471b3;"></i> Sign up</a>
+                      </div>
+                    </div>
+
+                  </div>
+                  <!-- {{-- <ul class="menu">
+                                            <li>
+                                              <a href="">home</a>
+                                            </li>
+                                            <li>
+                                              <a href="">about</a>
+                                              <ul class="sub-menu">
+                                                <li>
+                                                  <a href="">— company</a>
+                                                </li>
+                                                <li>
+                                                  <a href="">— people</a>
+                                                </li>
+                                              </ul>
+                                            </li>
+                                            <li>
+                                              <a href="">projects</a>
+                                            </li>
+                                            <li>
+                                              <a href="">clients</a>
+                                            </li>
+                                            <li>
+                                              <a href="">contact</a>
+                                            </li>
+                                          </ul> --}} -->
+                  <button class="menu-close" type="button" style="border: none; color: #0471b3; background-color: white"
+                    ; aria-label="close menu">✕</button>
+                </div>
+                <div class="cart-conect">
+                  <button class="menu-toggle" type="button"
+                    style="border: none; color: #0471b3; background-color: white;" aria-label="toggle menu"><i
+                      class="fa-solid fa-bars fa-bounce fa-xl"></i></button>
+                </div>
+              </nav>
+
+              <!-- {{-- </div> --}} -->
+
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- //////////////////////////////////////////////////////////////// -->
+
+  </header>
+
+
+  <div class="container m-0 d-flex">
+    <div class="flteer col-12">
+      <div class="writee d-flex col-3 border rounded me-4 shadow-lg p-3 mb-5 bg-body">
+
+        <form action="{{url('all_product_filter')}}" method="GET">
+          <div class="text border-bottom">
+            <h4> <b>Filters</b> </h4>
+          </div>
+          <div class="content1 p-0">
+            <div class="text text-black">
+              <h4>Categories</h4>
+            </div>
+            <div class="content2 ms-3">
+              <div>
+
+                <input id="category" type="checkbox" name="category[]" value="{{$cat->id}}" />
+                <label for="category"> Open Box (8) </label><br>
+                <input id="category" type="checkbox" name="category[]" value="{{$cat->id}}" />
+                <label for="category"> First Hand (8) </label><br>
+                <input id="category" type="checkbox" name="category[]" value="{{$cat->id}}" />
+                <label for="category"> Outlet (5) </label><br>
+              </div>
+            </div>
+            <br />
+            <div class="text text-black">
+              <h4>Brand</h4>
+            </div>
+            <div class="content2 ms-3">
+              <div>
+
+                <input id="brand" type="checkbox" name="brand[]" value="{{$brands->id}}" />
+                <label for="brand">كينوود (3)</label>
+                <br>
+                <input id="brand" type="checkbox" name="brand[]" value="{{$brands->id}}" />
+                <label for="brand">مولينكس (11)
+                </label>
+                <br>
+                <input id="brand" type="checkbox" name="brand[]" value="{{$brands->id}}" />
+                <label for="brand">سوكانى (3)</label>
+                <br>
+                <input id="brand" type="checkbox" name="brand[]" value="{{$brands->id}}" />
+                <label for="brand"> سامسونج (4) </label>
+                <br>
+              </div>
+            </div>
+            <br />
+            <div class="text text-black">
+              <h4>Name Product</h4>
+            </div>
+            <div class="content2 ms-3">
+              <div>
+
+                <input id="nameproduct" type="checkbox" name="nameproduct[]" value="{{$name->id}}" />
+                <label for="nameproduct"> محضر طعام (7)</label>
+                <br>
+                <input id="nameproduct" type="checkbox" name="nameproduct[]" value="{{$name->id}}" />
+                <label for="nameproduct"> مكوه (5)</label>
+                <br>
+                <input id="nameproduct" type="checkbox" name="nameproduct[]" value="{{$name->id}}" />
+                <label for="nameproduct"> سخان (5)</label>
+                <br>
+                <input id="nameproduct" type="checkbox" name="nameproduct[]" value="{{$name->id}}" />
+                <label for="nameproduct"> كبة (4)</label>
+                <br>
+
+              </div>
+            </div>
+            <br />
+            <div class="text text-black">
+              <div class="text1">
+                <h4>Price</h4>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <label for="min">Min Price</label>
+                  <input type="number" id="min" name="min" class="form-control" placeholder="0"
+                    value="{{request()->min}}">
+                </div>
+                <div class="col">
+                  <label for="max">Max Price</label>
+                  <input type="number" id="max" name="max" class="form-control" placeholder="0"
+                    value="{{request()->max}}">
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <button class="btn col-12 border mt-4 bg-b" style="background: #f1faff;" type="submit">Filter</button>
+              <a href="{{url('all_product')}}" class="btn col-12 border mt-4 bg-b"
+                style="background: #ff0303; color:white"> cleaning</a>
+            </div>
+          </div>
+        </form>
+
+      </div>
+      <div class="imagee col-9 ms-5">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <div class="card text-black">
+              <a href="view-product.html" style="text-decoration: none;">
+                <img src="img/Products/2023-07-18_1297default-3.jpg" height="300px" alt="Image" class="card-img-top" />
+                <div class="card-body">
+                  <div class="text-center">
+                    <h5 class="card-title text-black"><b> Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5 </b></h5>
+                  </div>
+
+                  <div class="d-flex justify-content-between text-black border p-2" style="margin-bottom: 72px;">
+                    <span> <b>Price</b> </span><span><B>2500 EGP</B></span>
+                  </div>
+
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card text-black">
+              <a href="view-product.html" style="text-decoration: none;">
+                <img src="img/Products/2023-07-18_1297default-3.jpg" height="300px" alt="Image" class="card-img-top" />
+                <div class="card-body">
+                  <div class="text-center">
+                    <h5 class="card-title text-black"><b> Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5 </b></h5>
+                  </div>
+                  <div class="border p-2">
+                    <div class="d-flex justify-content-between text-black">
+                      <span> <b>Price</b> </span><span><del>2500 EGP</del></span>
+                    </div>
+                    <div class="d-flex justify-content-between text-black">
+                      <span> <b>Discount</b> </span><span>5%</span>
+                    </div>
+                    <div class="d-flex justify-content-between total font-weight-bold mt-4 text-black">
+                      <span> <b>Total</b> </span><span><B>2000 EGP </B></span>
+                    </div>
+
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card text-black">
+              <a href="view-product.html" style="text-decoration: none;">
+                <img src="img/Products/2023-07-18_1297default-3.jpg" height="300px" alt="Image" class="card-img-top" />
+                <div class="card-body">
+                  <div class="text-center">
+                    <h5 class="card-title text-black"><b> Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5 </b></h5>
+                  </div>
+
+                  <div class="d-flex justify-content-between text-black border p-2" style="margin-bottom: 72px;">
+                    <span> <b>Price</b> </span><span><B>2500 EGP</B></span>
+                  </div>
+
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card text-black">
+              <a href="view-product.html" style="text-decoration: none;">
+                <img src="img/Products/2023-07-18_1297default-3.jpg" height="300px" alt="Image" class="card-img-top" />
+                <div class="card-body">
+                  <div class="text-center">
+                    <h5 class="card-title text-black"><b> Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5 </b></h5>
+                  </div>
+                  <div class="border p-2">
+                    <div class="d-flex justify-content-between text-black">
+                      <span> <b>Price</b> </span><span><del>2500 EGP</del></span>
+                    </div>
+                    <div class="d-flex justify-content-between text-black">
+                      <span> <b>Discount</b> </span><span>5%</span>
+                    </div>
+                    <div class="d-flex justify-content-between total font-weight-bold mt-4 text-black">
+                      <span> <b>Total</b> </span><span><B>2000 EGP </B></span>
+                    </div>
+
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card text-black">
+              <a href="view-product.html" style="text-decoration: none;">
+                <img src="img/Products/2023-07-18_1297default-3.jpg" height="300px" alt="Image" class="card-img-top" />
+                <div class="card-body">
+                  <div class="text-center">
+                    <h5 class="card-title text-black"><b> Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5 </b></h5>
+                  </div>
+
+                  <div class="d-flex justify-content-between text-black border p-2" style="margin-bottom: 72px;">
+                    <span> <b>Price</b> </span><span><B>2500 EGP</B></span>
+                  </div>
+
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card text-black">
+              <a href="view-product.html" style="text-decoration: none;">
+                <img src="img/Products/2023-07-18_1297default-3.jpg" height="300px" alt="Image" class="card-img-top" />
+                <div class="card-body">
+                  <div class="text-center">
+                    <h5 class="card-title text-black"><b> Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5 </b></h5>
+                  </div>
+                  <div class="border p-2">
+                    <div class="d-flex justify-content-between text-black">
+                      <span> <b>Price</b> </span><span><del>2500 EGP</del></span>
+                    </div>
+                    <div class="d-flex justify-content-between text-black">
+                      <span> <b>Discount</b> </span><span>5%</span>
+                    </div>
+                    <div class="d-flex justify-content-between total font-weight-bold mt-4 text-black">
+                      <span> <b>Total</b> </span><span><B>2000 EGP </B></span>
+                    </div>
+
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+        </div>
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="lightbox-container d-none justify-content-center align-items-center">
+      <div class="lightbox-item d-flex justify-content-between align-items-center">
+        <i id="prev" class="far fa-arrow-alt-circle-left"></i>
+        <i id="close" class="far fa-times-circle"></i>
+        <i id="next" class="far fa-arrow-alt-circle-right"></i>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-full">
+      <div class="container">
+        <div class="content1">
+          <i class="fas fa-phone"></i>
+          <div class="text">
+            <span>Phone</span>
+            <br>
+            <span><a href="tel:{{$set->phone}}" style="text-decoration: none; color: white;">012123456789</a></span>
+          </div>
+        </div>
+        <div class="content1 pb-2">
+          <i class="fa-brands fa-whatsapp"></i>
+          <div class="text">
+            <span>Phone</span>
+            <br>
+            <span>
+              <p style="color: white;">012123456789</p>
+            </span>
+          </div>
+        </div>
+        <hr>
+        <br>
+        <div class="content2">
+          <div class="box">
+            <p><b>Brands</b></p>
+            <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla </a></p>
+            <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla </a></p>
+            <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla </a></p>
+            <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla </a></p>
+            <p><b>Terms & Conditions</b></p>
+            <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla</a></p>
+            <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla</a></p>
+            <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla</a></p>
+            <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla</a></p>
+            <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla</a></p>
+          </div>
+          <!-- <div class="box">
+                    </div>  -->
+          <div class="box">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6906.215135123466!2d31.336308!3d30.062450999999996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fe62cadc78f%3A0x76e65d3198d12a8f!2z2YHYsdiy2Kkg2YTYqtis2KfYsdipINin2YTYo9is2YfYstipINin2YTZg9mH2LHYqNin2KbZitipINin2YTZhdmG2LLZhNmK2KkgRmFyemE!5e0!3m2!1sar!2seg!4v1690468922420!5m2!1sar!2seg"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <!-- <div class="box">
+                        <p><b>Trending right now</b></p>
+                        <p><a href="#">Every Deals</a></p>
+                        <p><a href="#">Mobile</a></p>
+                        <p><a href="#">Braun offers</a></p>
+                        <p><a href="#">TVs</a></p>
+                        <p><a href="#">Accessories</a></p>
+                        <p><a href="#">Oppo</a></p>
+                        <p><a href="#">Samsung</a></p>
+                        <p><a href="#">Apple</a></p>
+                    </div> -->
+          <div class="yem">
+            <form action="{{url('store-contact')}}" method="POST" enctype="multipart/form-data"
+              class="shadow-sm p-3 mb-5 bg-body rounded">
+              <h3 class="text-dark"> <strong>Contact Us</strong> </h3>
+              <p class="text-dark"> send your opinion or comment regarding the website or anything else </p>
+              <div class="mb-3">
+                <label for="name" class="form-label text-dark">Name</label>
+                <input type="text" class="form-control" name="name" id="name" value="ayman">
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label text-dark">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" value="ayman@gmail.com">
+              </div>
+              <div class="mb-3">
+                <label for="massage" class="form-label text-dark">Massage</label>
+                <textarea class="form-control" id="massage" name="massage" rows="5"></textarea>
+              </div>
+              <button type="submit" class="btn btn-dark">Send</button>
+            </form>
+          </div>
+        </div>
+        <hr>
+        <div class="copyright pb-3">
+          <div class="container">
+            Copyright &copy; 2023 <strong><b>Farza</b></strong> <strong>Inc. </strong>
+            <ul>
+              <li>
+                <a href="{{$set->facebook}}" aria-label="Read more about Seminole tax hike"><i
+                    class="fa-brands fa-facebook fa-xl" style="color: #ffffff;"></i></a>
+              </li>
+              <li>
+                <a href="{{$set->instagram }}" aria-label="Read more about Seminole tax hike"><i
+                    class="fa-brands fa-square-instagram fa-xl" style="color: #ffffff;"></i></a>
+              </li>
+              <li>
+                <a href="{{$set->youtube }}" aria-label="Read more about Seminole tax hike"><i
+                    class="fa-brands fa-youtube fa-xl" style="color: #ffffff;"></i></a>
+              </li>
+              <li>
+                <a href="{{$set->linkedin}}" aria-label="Read more about Seminole tax hike"><i
+                    class="fa-brands fa-linkedin fa-xl" style="color: #ffffff;"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="whatsapp-chat">
+    <a href=" https://wa.me/{{$set->whatsapp}}" aria-label="Read more about Seminole tax hike" style="font-size: 50px;">
+      <i class="fa-brands fa-whatsapp fa-beat fa-2xl" style="color: #25d366; font-size: 60px;"></i>
+    </a>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+
+  <!-- {{-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> --}} -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.js"></script>
+
+  <!-- {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> --}}
+        {{-- <script src="https://fastly.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> --}}
+        {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script> --}} -->
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.12/sweetalert2.min.js"></script>
+  <!-- {{-- <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script>
+        <script src='https://unpkg.com/vue-the-mask@0.11.1/dist/vue-the-mask.js'></script> --}} -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+
+  <script src="js/cart.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/script1.js"></script>
+  <script src="js/script3.js"></script>
+  <script src="js/script5.js"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K5F9LB4QS1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-K5F9LB4QS1');
+  </script>
+
+  <!-- @yield('script')
+    
+    @if (session('error'))
+    <script>
+    swal("Oops" , "{{session('error')}}" , "error")
+    </script>
+    @endif
+    
+    @if (session('status'))
+    <script>
+    swal("Good job!" , "{{session('status')}}" , "success")
+    </script>
+    @endif -->
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+  <script>
+    var availableTags = [];
+    $.ajax({
+      method: "GET",
+      url: "/product_search",
+      success: function (response) {
+        // console.log(response);
+        startAutoComplrte(response);
+      }
+    });
+    function startAutoComplrte(availableTags) {
+
+      $("#search_product").autocomplete({
+        source: availableTags
+      });
+    }
+  </script>
+
+
+
+
+</body>
+
+</html>
