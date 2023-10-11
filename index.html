@@ -28,16 +28,38 @@
     <!-- {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> --}} -->
 
     <link rel="stylesheet" href="fontawesome/arrow-up-from-bracket-solid.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="Css/sheet.css" rel="stylesheet" />
     <link href="Css/navbar.css" rel="stylesheet" />
 </head>
 
 <body>
-
+    <div class="top-navbar">
+        <div class="lang">
+            <span>English</span> <i class="fa-solid fa-globe"></i></i>
+        </div>
+        <button type="button" class="btn position-relative btn1 fw-bold"  id="" onclick="contact()">
+            contact us
+        </button>
+        <div class="border p-4 dropdown-menu shadow-lg p-3 mb-5 bg-body-tertiary rounded" id="contact1" style="display: none;">
+            <span> <b>Address:</b> ٤٢ شارع البطراوي المتفرع من شارع  عباس العقاد - مدينه نصر - عند كوبرى البطراوى بجوار كوستا كافيه             -الممر اللى اوله محل بيت العطارة </span><br>
+            <span> <b>Email:</b> hr.farza2022@gmail.com</span><br>
+            <span> <b>Phone:</b> 0224037986 </span><br>
+            <span> <b>WhatsApp:</b> +201555578007 </span><br>
+        </div>
+     </div>
     <nav class="nav-bar  desk-nav">
         <a class="logo" href="#">
               <img src="img/Farza.png" class="" />
           </a>
+          <form class="form-search" action="" method="POST">
+
+            <input class="input-search" name="search_product" id="search_product" type="search"
+                placeholder="Search for Product or brands" aria-label="Search">
+            <button class="btn-search" style="width: 10%"> <i class="fa-solid fa-magnifying-glass"></i> </button>
+        </form>
             <div class="navbar-pages">
                 <a class=""  aria-current="page"
                     href="index.html">Home</a>
@@ -45,14 +67,7 @@
                 <a class="" aria-current="page"
                     href="all-product.html">All Product</a>
             </div>
-        <!--  -->
-        <form class="form-search" action="" method="POST">
-
-            <input class="input-search" name="search_product" id="search_product" type="search"
-                placeholder="Search for Product or brands" aria-label="Search">
-            <button class="btn-search" style="width: 10%"> <i class="fa-solid fa-magnifying-glass"></i> </button>
-        </form>
-        <!--  -->
+       
         <div class="navbar-icons">
             <div class="cart-icons cart-conect me-2">
                 <a href="cart.html">
@@ -60,7 +75,7 @@
                     <span class="cart-count bg-primary ">5</span>
                 </a>
             </div>
-            <div class="profile-icon"  style="width: 40px; height:40px">
+            <div class="profile-icon"  style="width: 30px; height:30px ;">
                 <a href="account.html" title="ayman">
                     <img src="img/user/user.jpg" alt="Profile" class="rounded-circle" style="width:100%; height: 100%;"/>
                 </a>
@@ -132,6 +147,7 @@
               <a href="{{ route('login') }}"
               class="text-decoration-none m-2 fw-bold" style="color:#0471b3">Login</a>
                 </div>
+                
   </nav>
 
 <!--===================================== Navbar for mobile ======================== -->
@@ -177,42 +193,7 @@
                     <a class="nav-link active fs-tt clo-6" style="color: #0471b3;" aria-current="page" href="https://farza.online/all_product"><b>All Product</b></a>
                 </div>
             </div>
-            <hr style="color: #0471b3;">
-
-            <div class="row gap-3">
-            <div class="col-2">
-            <button type="button" class="btn position-relative btn1 fw-bold" style="border:1px solid #0471b3; width: 70px; color: #0471b3;" id="" onclick="contact()">
-                contact 
-            </button>
-            <br><br>
-            <button type="button" class="btn position-relative btn2 bgmenu fw-bold" style="border:1px solid #0471b3;width: 70px; color: #0471b3;" id="" onclick="Dashboard()">
-                Follow us  
-            </button>
-            </div>
-              <div class="col-9">
-              <div class="border p-4 dropdown-menu shadow-lg p-3 mb-5 bg-body-tertiary rounded" id="contact1" style="display: none;">
-                <span> <b>Address:</b> ٤٢ شارع البطراوي المتفرع من شارع  عباس العقاد - مدينه نصر - عند كوبرى البطراوى بجوار كوستا كافيه             -الممر اللى اوله محل بيت العطارة </span><br>
-                <span> <b>Email:</b> hr.farza2022@gmail.com</span><br>
-                <span> <b>Phone:</b> 0224037986 </span><br>
-                <span> <b>WhatsApp:</b> +201555578007 </span><br>
-            </div>
-            <div class="  p-4 dropdown-menu shadow-lg p-3 mb-5 bg-body-tertiary rounded" style="justify-content: center; display: block;" id="Dashboard1">
-                <li style="display: inline-block; padding: 5px;">
-                    <a href="https://www.facebook.com/farza2?mibextid=ZbWKwL" aria-label="Read more about Seminole tax hike"><svg class="svg-inline--fa fa-facebook fa-xl" style="color: #0471b3;" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg><!-- <i class="fa-brands fa-facebook fa-xl" style="color: #0471b3;"></i> Font Awesome fontawesome.com --></a>
-                </li>
-                <li style="display: inline-block; padding: 5px;">
-                    <a href="https://instagram.com/farza.24?igshid=MzRlODBiNWFlZA==" aria-label="Read more about Seminole tax hike"><svg class="svg-inline--fa fa-square-instagram fa-xl" style="color: #0471b3;" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="square-instagram" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z"></path></svg><!-- <i class="fa-brands fa-square-instagram fa-xl" style="color: #0471b3;"></i> Font Awesome fontawesome.com --></a>
-                </li>
-                <li style="display: inline-block; padding: 5px;">
-                    <a href="https://www.youtube.com" aria-label="Read more about Seminole tax hike"><svg class="svg-inline--fa fa-youtube fa-xl" style="color: #0471b3;" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="youtube" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg><!-- <i class="fa-brands fa-youtube fa-xl" style="color: #0471b3;"></i> Font Awesome fontawesome.com --></a>
-                </li>
-                <li style="display: inline-block; padding: 5px;">
-                    <a href="https://www.linkedin.com/company/farza/" aria-label="Read more about Seminole tax hike"><svg class="svg-inline--fa fa-linkedin fa-xl" style="color: #0471b3;" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg><!-- <i class="fa-brands fa-linkedin fa-xl" style="color: #0471b3;"></i> Font Awesome fontawesome.com --></a>
-                </li>
-            </div>
-        </div>
-            </div>
-            <br/>  <hr style="color: #0471b3;"> <br/>
+              <hr style="color: #0471b3;"> 
             <div class="m-auto sign" style="display: grid; justify-content:flex-start;">
                 <a href="{{ route('login') }}"
                 class="text-decoration-none m-2 fw-bold"> 
@@ -316,7 +297,7 @@
                                 </div>
                                 <div class="swiper-slide card">
                                     <div class="card-img">
-                                        <img src="image/farza8.png" alt="">
+                                        <img src="img/Products/2023-07-16_4.jpg" alt="">
                                     </div>
                                     <div class="card-text">
                                         <p>Laptops & PCs</p>
@@ -324,7 +305,7 @@
                                 </div>
                                 <div class="swiper-slide card">
                                     <div class="card-img">
-                                        <img src="image/farza3.png" alt="">
+                                        <img src="img/Products/2023-07-18_3086default-8.jpg" alt="">
                                     </div>
                                     <div class="card-text">
                                         <p>Televisions</p>
@@ -332,7 +313,7 @@
                                 </div>
                                 <div class="swiper-slide card">
                                     <div class="card-img">
-                                        <img src="image/farza4.png" alt="">
+                                        <img src="img/Products/2023-07-16_4.jpg" alt="">
                                     </div>
                                     <div class="card-text">
                                         <p>Mobiles</p>
@@ -340,7 +321,7 @@
                                 </div>
                                 <div class="swiper-slide card">
                                     <div class="card-img">
-                                        <img src="image/farza9.png" alt="">
+                                        <img src="img/Products/2023-07-18_2706default-10.jpg" alt="">
                                     </div>
                                     <div class="card-text">
                                         <p>Small home appliances</p>
@@ -348,7 +329,7 @@
                                 </div>
                                 <div class="swiper-slide card">
                                     <div class="card-img">
-                                        <img src="image/farza18.png" alt="">
+                                        <img src="img/Products/2023-07-16_4.jpg" alt="">
                                     </div>
                                     <div class="card-text">
                                         <p>Wearables</p>
@@ -356,7 +337,7 @@
                                 </div>
                                 <div class="swiper-slide card">
                                     <div class="card-img">
-                                        <img src="image/farza11.png" alt="">
+                                        <img src="img/Products/2023-07-18_2581default-1.jpg" alt="">
                                     </div>
                                     <div class="card-text">
                                         <p>Mother’s Day Sale</p>
@@ -364,7 +345,7 @@
                                 </div>
                                 <div class="swiper-slide card">
                                     <div class="card-img">
-                                        <img src="image/farza13.png" alt="">
+                                        <img src="img/Products/2023-07-16_4.jpg" alt="">
                                     </div>
                                     <div class="card-text">
                                         <p>Mother’s Day Sale</p>
@@ -372,7 +353,7 @@
                                 </div>
                                 <div class="swiper-slide card">
                                     <div class="card-img">
-                                        <img src="image/farza14.png" alt="">
+                                        <img src="img/Products/2023-07-18_2059default-7.jpg" alt="">
                                     </div>
                                     <div class="card-text">
                                         <p>Laptops & PCs</p>
@@ -391,12 +372,12 @@
         <section>
             <div class="slider3">
                 <div class="container">
-                    <div class="slider3-container" style="background-image: url(img/offer/background.jpg);">
+                    <div class="slider3-container" style="background-color: #0471b3;">
                         <div class="content">
                             <h2 class="text-dark">Ramadan offers</h2>
                             <!-- {{-- <button class="btn btn-light"><b>Shop now</b></button> --}} -->
                         </div>
-                        <div class="swiper mySwiper swiper-3">
+                        <div class="swiper mySwiper ">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
 
@@ -407,16 +388,13 @@
                                                 style="width:100px !important; height: 110px !important;" alt="Image">
                                         </div>
                                         <!-- {{-- <div class="card-text"> --}} -->
-                                        <h6> <B>Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5</B> </h6>
+                                        <h6> Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5 </h6>
                                     </a>
-
-                                    <p style="font-size: 15px;"><B>2500 EGP</B></p>
-
-                                    <h6><B>2000 EGP </B> </h6>
+                                    <h6>2000 EGP</h6>
                                     <span style="font-size: 12px">(Discount:5%) <del>2500 EGP</del> </span>
-
-
+                                    <span> <span class="m-2 badge rounded-pill text-bg-danger stock">Out of stock</span>
                                 </div>
+
                                 <div class="swiper-slide">
 
                                     <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}"
@@ -449,7 +427,7 @@
                                     <h6><B>2000 EGP </B> </h6>
                                     <span style="font-size: 12px">(Discount:5%) <del>2500 EGP</del> </span>
 
-                                    <span> <span class="m-2 badge rounded-pill text-bg-danger">Out of stock</span>
+                                     <span class="m-2 badge rounded-pill text-bg-danger stock">Out of stock</span>
 
                                 </div>
                                 <div class="swiper-slide">
@@ -503,7 +481,7 @@
                                     <h6><B>2000 EGP </B> </h6>
                                     <span style="font-size: 12px">(Discount:5%) <del>2500 EGP</del> </span>
 
-                                    <span> <span class="m-2 badge rounded-pill text-bg-danger">Out of stock</span>
+                                     <span class="m-2 badge rounded-pill text-bg-danger stock">Out of stock</span>
 
                                 </div>
                                 <div class="swiper-slide">
@@ -557,7 +535,7 @@
                                     <h6><B>2000 EGP </B> </h6>
                                     <span style="font-size: 12px">(Discount:5%) <del>2500 EGP</del> </span>
 
-                                    <span> <span class="m-2 badge rounded-pill text-bg-danger">Out of stock</span>
+                                    <span class="m-2 badge rounded-pill text-bg-danger stock">Out of stock</span>
 
                                 </div>
 
@@ -577,7 +555,7 @@
                 <div class="container" >
                     <div class="slider4-container" style="background-color: #EEE;">
                         <div class="titleSection">
-                            <p><b>المنتجات</b></p>
+                            <h2>Products</h2>
                         </div>
                         <div class="swiper mySwiper swiper-4">
                             <div class="swiper-wrapper">
@@ -727,7 +705,7 @@
                 </div>
         </section>
 
-        <section>
+        <!-- <section>
             <div class="more">
                 <div class="container shadow-lg p-3 mb-5 bg-body rounded col-9"
                     style="background-color:#0471b3 !important;">
@@ -744,173 +722,113 @@
                             Perferendis in mollitia autem corrupti? Dolorum eveniet veritatis obcaecati, officia tempore
                             reiciendis ducimus magnam soluta, animi amet esse culpa dicta modi consequuntur.</p>
                     </div>
-                    <!-- {{-- <div class="paner">
+                    {{-- <div class="paner">
                             <img class="logo-more" src="{{ asset('assetsUser/image/six.webp') }}" alt="">
                             <p class="tolen">Shop all you want and repay in small <br> amounts, every month, for up to 48 months!</p>
                             <span class="open">
                             <button class="q">Open minicash  account</button> 
                         <p class="p-more">Learn more about minicash</p>
                         </span>
-                        </div> --}} -->
+                        </div> --}}
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Best Seller -->
         <section>
             <div class="slider5">
                 <div class="container">
-                    <div class="slider5-container" style="background-color: #EEE;">
+                    <div class="slider5-container" >
                         <div class="titleSection">
-                            <p><b>الاكثر مبيعا</b></p>
+                            <h2>Best Seller</h2>
                         </div>
                         <div class="swiper mySwiper swiper-5">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide card">
-                                    <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}"
-                                        style="text-decoration: none; color:black;">
+                                    <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}">
                                         <div class="card-img pb-4">
-                                            <img src="img/Products/2023-07-16_1.jpg"
-                                                style="width:100px !important; height: 110px !important;" alt="Image">
+                                            <img src="img/Products/2023-07-16_4.jpg " alt="Image">
                                         </div>
-                                        <!-- {{-- <div class="card-text"> --}} -->
-                                        <h6> <B>Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5</B> </h6>
+                                          <div class="layer-content">
+                                            <div class="layer-info">
+                                                <h6 class="product-name">Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5 </h6>
+                                                <h6 class="product-price">2000 EGP </h6>
+                                                <div class="sale">
+                                                    <span class="product-discount">(Discount:5%) <del>2500 EGP</del> </span>
+                                                    <span class="m-2 badge rounded-pill text-bg-danger stock">Out of stock</span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </a>
-
-                                    <p style="font-size: 15px;"><B>2500 EGP</B></p>
-
-                                    <h6><B>2000 EGP </B> </h6>
-                                    <span style="font-size: 12px">(Discount:5%) <del>2500 EGP</del> </span>
                                 </div>
+
                                 <div class="swiper-slide card">
-                                    <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}"
-                                        style="text-decoration: none; color:black;">
+                                    <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}">
                                         <div class="card-img pb-4">
-                                            <img src="img/Products/2023-07-16_3.jpg"
-                                                style="width:100px !important; height: 110px !important;" alt="Image">
+                                            <img src="img/Products/2023-07-18_486app-3.jpg" alt="Image">
                                         </div>
-                                        <!-- {{-- <div class="card-text"> --}} -->
-                                        <h6> <B>Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5</B> </h6>
-                                    </a>
-
-                                    <p style="font-size: 15px;"><B>2500 EGP</B></p>
+                                        <div class="layer-content">
+                                            <div class="layer-info">
+                                                <h6 class="product-name">Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5 </h6>
+                                                <h6 class="product-price">2000 EGP </h6>
+                                                <div class="sale">
+                                                    <span class="product-discount">(Discount:5%) <del>2500 EGP</del> </span>
+                                                    <span class="m-2 badge rounded-pill text-bg-danger stock">Out of stock</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </a>
                                 </div>
+
                                 <div class="swiper-slide card">
-                                    <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}"
-                                        style="text-decoration: none; color:black;">
+                                    <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}">
                                         <div class="card-img pb-4">
-                                            <img src="img/Products/2023-07-16_2.jpg "
-                                                style="width:100px !important; height: 110px !important;" alt="Image">
+                                            <img src="img/Products/2023-07-18_3086default-8.jpg " alt="Image">
                                         </div>
-                                        <!-- {{-- <div class="card-text"> --}} -->
-                                        <h6> <B>Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5</B> </h6>
-                                    </a>
-
-
-                                    <h6><B>2000 EGP </B> </h6>
-                                    <span style="font-size: 12px">(Discount:5%) <del>2500 EGP</del> </span>
-
-                                    <span> <span class="m-2 badge rounded-pill text-bg-danger">Out of stock</span>
+                                        <div class="layer-content">
+                                            <div class="layer-info">
+                                                <h6 class="product-name">Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5 </h6>
+                                                <h6 class="product-price">2000 EGP </h6>
+                                                <div class="sale">
+                                                    <span class="product-discount">(Discount:5%) <del>2500 EGP</del> </span>
+                                                    <span class="m-2 badge rounded-pill text-bg-danger stock">Out of stock</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a> 
                                 </div>
+
                                 <div class="swiper-slide card">
-                                    <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}"
-                                        style="text-decoration: none; color:black;">
+                                    <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}">
                                         <div class="card-img pb-4">
-                                            <img src="img/Products/2023-07-16_1.jpg"
-                                                style="width:100px !important; height: 110px !important;" alt="Image">
+                                            <img src="img/Products/2023-07-18_741default-5.jpg " alt="Image">
                                         </div>
-                                        <!-- {{-- <div class="card-text"> --}} -->
-                                        <h6> <B>Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5</B> </h6>
-                                    </a>
-
-                                    <p style="font-size: 15px;"><B>2500 EGP</B></p>
-
-                                    <h6><B>2000 EGP </B> </h6>
-                                    <span style="font-size: 12px">(Discount:5%) <del>2500 EGP</del> </span>
-                                </div>
-                                <div class="swiper-slide card">
-                                    <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}"
-                                        style="text-decoration: none; color:black;">
-                                        <div class="card-img pb-4">
-                                            <img src="img/Products/2023-07-16_3.jpg"
-                                                style="width:100px !important; height: 110px !important;" alt="Image">
+                                        <div class="layer-content">
+                                            <div class="layer-info">
+                                                <h6 class="product-name">Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5 </h6>
+                                                <h6 class="product-price">2000 EGP </h6>
+                                                <div class="sale">
+                                                    <span class="product-discount">(Discount:5%) <del>2500 EGP</del> </span>
+                                                    <span class="m-2 badge rounded-pill text-bg-danger stock">Out of stock</span>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <!-- {{-- <div class="card-text"> --}} -->
-                                        <h6> <B>Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5</B> </h6>
                                     </a>
-
-                                    <p style="font-size: 15px;"><B>2500 EGP</B></p>
                                 </div>
-                                <div class="swiper-slide card">
-                                    <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}"
-                                        style="text-decoration: none; color:black;">
-                                        <div class="card-img pb-4">
-                                            <img src="img/Products/2023-07-16_2.jpg "
-                                                style="width:100px !important; height: 110px !important;" alt="Image">
-                                        </div>
-                                        <!-- {{-- <div class="card-text"> --}} -->
-                                        <h6> <B>Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5</B> </h6>
-                                    </a>
 
-
-                                    <h6><B>2000 EGP </B> </h6>
-                                    <span style="font-size: 12px">(Discount:5%) <del>2500 EGP</del> </span>
-
-                                    <span> <span class="m-2 badge rounded-pill text-bg-danger">Out of stock</span>
-                                </div>
-                                <div class="swiper-slide card">
-                                    <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}"
-                                        style="text-decoration: none; color:black;">
-                                        <div class="card-img pb-4">
-                                            <img src="img/Products/2023-07-16_1.jpg"
-                                                style="width:100px !important; height: 110px !important;" alt="Image">
-                                        </div>
-                                        <!-- {{-- <div class="card-text"> --}} -->
-                                        <h6> <B>Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5</B> </h6>
-                                    </a>
-
-                                    <p style="font-size: 15px;"><B>2500 EGP</B></p>
-
-                                    <h6><B>2000 EGP </B> </h6>
-                                    <span style="font-size: 12px">(Discount:5%) <del>2500 EGP</del> </span>
-                                </div>
-                                <div class="swiper-slide card">
-                                    <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}"
-                                        style="text-decoration: none; color:black;">
-                                        <div class="card-img pb-4">
-                                            <img src="img/Products/2023-07-16_3.jpg"
-                                                style="width:100px !important; height: 110px !important;" alt="Image">
-                                        </div>
-                                        <!-- {{-- <div class="card-text"> --}} -->
-                                        <h6> <B>Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5</B> </h6>
-                                    </a>
-
-                                    <p style="font-size: 15px;"><B>2500 EGP</B></p>
-                                </div>
-                                <div class="swiper-slide card">
-                                    <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}"
-                                        style="text-decoration: none; color:black;">
-                                        <div class="card-img pb-4">
-                                            <img src="img/Products/2023-07-16_2.jpg "
-                                                style="width:100px !important; height: 110px !important;" alt="Image">
-                                        </div>
-                                        <!-- {{-- <div class="card-text"> --}} -->
-                                        <h6> <B>Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5</B> </h6>
-                                    </a>
-
-
-                                    <h6><B>2000 EGP </B> </h6>
-                                    <span style="font-size: 12px">(Discount:5%) <del>2500 EGP</del> </span>
-
-                                    <span> <span class="m-2 badge rounded-pill text-bg-danger">Out of stock</span>
-                                </div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
                         </div>
                     </div>
                 </div>
         </section>
+
+
+
+
+
+
+
+
 
         <section class="wrapp my-4">
             <div class="container wrap">
@@ -1145,65 +1063,57 @@
     <footer>
         <div class="footer-full">
             <div class="container">
-                <div class="content1">
-                    <i class="fas fa-phone"></i>
-                    <div class="text">
-                        <span>Phone</span>
-                        <br>
-                        <span><a href="tel:{{$set->phone}}"
-                                style="text-decoration: none; color: white;">012123456789</a></span>
+                <div class="top-footer">
+                    <div class="phone" >
+                        <h3>Call Us</h3>
+                            <div class="content1">
+                                <i class="fas fa-phone"></i>
+                                    <span>
+                                        <a href="tel:{{$set->phone}}">012123456789</a>
+                                    </span>
+                            </div>
+                            <div class="content1 ">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                    <span>
+                                        <p>012123456789</p>
+                                    </span>
+                            </div>
+                    </div>
+
+                <div class="box">
+                   <div class="brand">
+                        <h3>Brands</h3>
+                        <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla </a></p>
+                        <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla </a></p>
+                        <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla </a></p>
+                        <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla </a></p>
+                   </div>
+               
+                    <div class="term">
+                        <h3>Terms & Conditions</h3>
+                    <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla</a></p>
+                    <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla</a></p>
+                    <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla</a></p>
+                    <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla</a></p>
                     </div>
                 </div>
-                <div class="content1 pb-2">
-                    <i class="fa-brands fa-whatsapp"></i>
-                    <div class="text">
-                        <span>Phone</span>
-                        <br>
-                        <span>
-                            <p style="color: white;">012123456789</p>
-                        </span>
-                    </div>
                 </div>
                 <hr>
                 <br>
-                <div class="content2">
-                    <div class="box">
-                        <p><b>Brands</b></p>
-                        <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla </a></p>
-                        <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla </a></p>
-                        <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla </a></p>
-                        <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla </a></p>
-                        <p><b>Terms & Conditions</b></p>
-                        <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla</a></p>
-                        <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla</a></p>
-                        <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla</a></p>
-                        <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla</a></p>
-                        <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla</a></p>
-                    </div>
-                    <!-- <div class="box">
-                        </div>  -->
+
+
+                <div class="bottom-footer">
                     <div class="box">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6906.215135123466!2d31.336308!3d30.062450999999996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fe62cadc78f%3A0x76e65d3198d12a8f!2z2YHYsdiy2Kkg2YTYqtis2KfYsdipINin2YTYo9is2YfYstipINin2YTZg9mH2LHYqNin2KbZitipINin2YTZhdmG2LLZhNmK2KkgRmFyemE!5e0!3m2!1sar!2seg!4v1690468922420!5m2!1sar!2seg"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                             allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                    <!-- <div class="box">
-                            <p><b>Trending right now</b></p>
-                            <p><a href="#">Every Deals</a></p>
-                            <p><a href="#">Mobile</a></p>
-                            <p><a href="#">Braun offers</a></p>
-                            <p><a href="#">TVs</a></p>
-                            <p><a href="#">Accessories</a></p>
-                            <p><a href="#">Oppo</a></p>
-                            <p><a href="#">Samsung</a></p>
-                            <p><a href="#">Apple</a></p>
-                        </div> -->
                     <div class="yem">
                         <form action="{{url('store-contact')}}" method="POST" enctype="multipart/form-data"
                             class="shadow-sm p-3 mb-5 bg-body rounded">
                             <h3 class="text-dark"> <strong>Contact Us</strong> </h3>
-                            <p class="text-dark"> send your opinion or comment regarding the website or anything else
+                            <p class="text-dark"> send your opinion , comment on the website or anything else
                             </p>
                             <div class="mb-3">
                                 <label for="name" class="form-label text-dark">Name</label>
@@ -1214,7 +1124,7 @@
                                 <input type="email" class="form-control" id="email" name="email"
                                     value="ayman@gmail.com">
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-3 textarea">
                                 <label for="massage" class="form-label text-dark">Massage</label>
                                 <textarea class="form-control" id="massage" name="massage" rows="5"></textarea>
                             </div>
@@ -1225,7 +1135,7 @@
                 <hr>
                 <div class="copyright pb-3">
                     <div class="container">
-                        Copyright &copy; 2023 <strong><b>Farza</b></strong> <strong>Inc. </strong>
+                        <p>Copyright &copy; 2023 <strong><b>Farza</b></strong> <strong>Inc. </strong></p>
                         <ul>
                             <li>
                                 <a href="{{$set->facebook}}" aria-label="Read more about Seminole tax hike"><i
