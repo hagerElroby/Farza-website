@@ -3474,3 +3474,44 @@ table {
     box-shadow: 0px 17px 20px -6px rgba(36, 52, 70, 0.36);
   }
 }
+/*========================================== About page ============== */
+.about-section{
+  width: 90%;
+}
+.about-section .top-img {
+  background-image: url(../img/photo_٢٠٢٣-١٠-١٥_١٥-٢٧-٥٩.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  width: 90%;
+  min-height: 400px;
+  position: relative;
+  margin: 40px 10%;
+}
+.about-section .overlay{
+position: absolute;
+top:0;
+right: 0;
+left: 0;
+bottom: 0;
+background-color: rgba(0,0, 0, 0.7);
+}
+.about-section .about-content{
+  width: 65%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.about-section .about-content h3{
+  color: #fff;
+  font-size: 3.5rem;
+}
+.about-section .about-info{
+  margin: 10px 10%;
+}

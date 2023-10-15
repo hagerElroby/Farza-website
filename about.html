@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
     <head>
         <title>Farza Company</title>
         <meta charset="UTF-8" />
@@ -123,73 +122,34 @@
     </nav> 
     
 
-    <main>
-        <div class="col-lg-6 col-md-6 m-auto border p-4 rounded">
-            <form action="{{url('update-address/' . $delivery->id)}}" method="POST" enctype="multipart/form-data">
-                <h3 style="background: #0471b3" class="p-2">Edit Delivery Addresa</h3>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <input type="hidden" name="user_id" value="{{Auth::user()->id}}" />
-                        <div class="default-form-box">
-                            <label for="name">Full Name <span>*</span></label>
-                            <input class="form-control" name="name" id="name" value="ayman" type="text" />
-                        </div>
-                        <div class="default-form-box">
-                            <label for="email">Email <span>*</span></label>
-                            <input class="form-control" name="email" id="email" value="ayman@gmail.com" type="email" />
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="default-form-box">
-                            <label for="phone">Phone Number</label>
-                            <input class="form-control" name="phone" id="phone" type="number" value="+012123456789" />
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="default-form-box">
-                            <label for="shipping_charge_id">City <span>*</span></label>
-                            <select class="country_option nice-select wide" name="shipping_charge_id"
-                                id="shipping_charge_id">
-                                <option selected disabled>Select a City</option>
-
-                                <option value="{{$ship->id}}">القاهره</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="default-form-box">
-                            <label for="district">District <span>*</span></label>
-                            <input class="form-control" id="district" name="district" value="المقطم" type="text" />
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="default-form-box">
-                            <label for="area">Area <span>*</span></label>
-                            <input class="form-control" name="area" id="area" value="الحى الاول" type="text" />
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="default-form-box">
-                            <label for="street">Street<span>*</span></label>
-                            <input class="form-control" name="street" id="street" value="شارع"
-                                placeholder="House number and street name" type="text" />
-                        </div>
-                    </div>
-                    <div class="col-12 mt-3">
-                        <div class="order-notes">
-                            <label for="note">Order & Address Notes</label>
-                            <textarea id="note" name="note"
-                                placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary mt-3">Edit</button>
+    <main id="main" class="main">
+  
+      <section class="about-section">
+           <div class="top-img">
+            <div class="overlay">
+                <div class="about-content">
+                        <h3>About Us</h3>
                 </div>
-            </form>
-        </div>
+            </div>
+           </div>
+           <div class="about-info">
+            <h4>Who are we</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Iure soluta facere, fugiat eius quisquam repudiandae perferendis
+                 explicabo tempora aspernatur molestiae quas. Atque consectetur error 
+                 Iure soluta facere, fugiat eius quisquam repudiandae perferendis
+                 explicabo tempora aspernatur molestiae quas. Atque consectetur error
+                 Iure soluta facere, fugiat eius quisquam repudiandae perferendis
+                 explicabo tempora aspernatur molestiae quas. Atque consectetur error
+                 Iure soluta facere, fugiat eius quisquam repudiandae perferendis
+                 explicabo tempora aspernatur molestiae quas. Atque consectetur error
+                 ea nobis, quia adipisci ut odio!</p>
+           </div>
+      </section>
     </main>
 
-  <!-- Start  Footer -->
-  <footer>
+   <!-- Start  Footer -->
+   <footer>
     <div class="footer-full">
         <div class="container">
             <!-- Start Top Footer -->
@@ -227,9 +187,9 @@
                 <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla</a></p>
                 </div>
                 <div class="about">
-                    <h3>About Farza</h3>
-                    <p><a class="" aria-current="page" href="about.html">About Us</a></p>
-                </div>
+                  <h3>About Farza</h3>
+                  <p><a class="" aria-current="page" href="about.html">About Us</a></p>
+              </div>
             </div>
             </div> <!-- End Top Footer -->
             <hr style="color:#fff !important;">
@@ -293,7 +253,6 @@
         </div>
     </div>
 </footer> <!-- End Footer -->
-
 
     <div class="whatsapp-chat">
         <a href=" https://wa.me/{{$set->whatsapp}}" aria-label="Read more about Seminole tax hike"

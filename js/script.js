@@ -40,8 +40,8 @@ var slider1 = new Swiper(".slider-onee .mySwiper", {
 
 // add i add the navigation for this slider
 var slider2 = new Swiper(".slider-two .mySwiper", {
-  slidesPerView: 6, // this code that let the slides be 8 in one slide
-  spaceBetween: 30,
+  slidesPerView: 5,    // this code that let the slides be 8 in one slide
+  spaceBetween: 10,
   freeMode: true,
 
   autoplay: {
@@ -57,8 +57,8 @@ var slider2 = new Swiper(".slider-two .mySwiper", {
 });
 
 var slider3 = new Swiper(".slider3 .mySwiper", {
-  slidesPerView: 4, // this code that let the slides be 8 in one slide
-  spaceBetween: 30,
+  slidesPerView: 3, // this code that let the slides be 8 in one slide
+  spaceBetween: 10,
   freeMode: true,
   autoplay: {
     delay: 2500,
@@ -73,22 +73,22 @@ var slider3 = new Swiper(".slider3 .mySwiper", {
 });
 
 // Responsive Configuration
-slider3.on('resize', function () {
-  if (window.innerWidth >= 768) {
-    slider3.params.slidesPerView = 4; // Display 4 cards on larger screens
-  } else if (window.innerWidth >= 580) {
-    slider3.params.slidesPerView = 3; // Display 2 cards on smaller screens
-  }else{
-      slider3.params.slidesPerView = 1; // Display 2 cards on smaller screens
-  }
-  slider3.update(); // Update swiper after changing slidesPerView
-});
+// slider3.on('resize', function () {
+//   if (window.innerWidth >= 768) {
+//     slider3.params.slidesPerView = 4; // Display 4 cards on larger screens
+//   } else if (window.innerWidth >= 580) {
+//     slider3.params.slidesPerView = 3; // Display 2 cards on smaller screens
+//   }else{
+//       slider3.params.slidesPerView = 1; // Display 2 cards on smaller screens
+//   }
+//   slider3.update(); // Update swiper after changing slidesPerView
+// });
 
-// Initialize slider
-slider3.init();
+// // Initialize slider
+// slider3.init();
 
 var slider4 = new Swiper(".slider4 .mySwiper", {
-  slidesPerView: 5, // this code that let the slides be 8 in one slide
+  slidesPerView: 3, // this code that let the slides be 8 in one slide
   spaceBetween: 10,
   freeMode: true,
   autoplay: {
@@ -104,21 +104,21 @@ var slider4 = new Swiper(".slider4 .mySwiper", {
 });
 
 // Responsive Configuration
-slider4.on('resize', function () {
-  if (window.innerWidth >= 768) {
-    slider4.params.slidesPerView = 4; // Display 4 cards on larger screens
-  } else if (window.innerWidth >= 580) {
-    slider4.params.slidesPerView = 3; // Display 2 cards on smaller screens
-  }else{
-      slider4.params.slidesPerView = 1; // Display 2 cards on smaller screens
-  }
-  slider4.update(); // Update swiper after changing slidesPerView
-});
-// Initialize slider
-slider4.init();
+// slider4.on('resize', function () {
+//   if (window.innerWidth >= 768) {
+//     slider4.params.slidesPerView = 4; // Display 4 cards on larger screens
+//   } else if (window.innerWidth >= 580) {
+//     slider4.params.slidesPerView = 3; // Display 2 cards on smaller screens
+//   }else{
+//       slider4.params.slidesPerView = 1; // Display 2 cards on smaller screens
+//   }
+//   slider4.update(); // Update swiper after changing slidesPerView
+// });
+// // Initialize slider
+// slider4.init();
 
 var slider5 = new Swiper(".slider5 .mySwiper", {
-  slidesPerView: 5, // this code that let the slides be 8 in one slide
+  slidesPerView: 7, // this code that let the slides be 8 in one slide
   spaceBetween: 10,
   freeMode: true,
 
@@ -129,18 +129,18 @@ var slider5 = new Swiper(".slider5 .mySwiper", {
   // options for slider 2
 });
 // Responsive Configuration
-slider5.on('resize', function () {
-  if (window.innerWidth >= 768) {
-    slider5.params.slidesPerView = 5; // Display 5 cards on larger screens
-  } else if (window.innerWidth >= 580) {
-    slider5.params.slidesPerView = 3; // Display 2 cards on smaller screens
-  }else{
-      slider5.params.slidesPerView = 1; // Display 2 cards on smaller screens
-  }
-  slider5.update(); // Update swiper after changing slidesPerView
-});
-// Initialize slider
-slider5.init();
+// slider5.on('resize', function () {
+//   if (window.innerWidth >= 768) {
+//     slider5.params.slidesPerView = 5; // Display 5 cards on larger screens
+//   } else if (window.innerWidth >= 580) {
+//     slider5.params.slidesPerView = 3; // Display 2 cards on smaller screens
+//   }else{
+//       slider5.params.slidesPerView = 1; // Display 2 cards on smaller screens
+//   }
+//   slider5.update(); // Update swiper after changing slidesPerView
+// });
+// // Initialize slider
+// slider5.init();
 
 
 var slider7 = new Swiper(".slider7 .mySwiper", {
