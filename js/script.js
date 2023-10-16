@@ -43,6 +43,7 @@ var slider2 = new Swiper(".slider-two .mySwiper", {
   slidesPerView: 1,    // this code that let the slides be 8 in one slide
   spaceBetween: 31,
   freeMode: true,
+  loop: true,
 
   autoplay: {
     delay: 2500,
@@ -60,6 +61,7 @@ var slider3 = new Swiper(".slider3 .mySwiper", {
   slidesPerView: 1, // this code that let the slides be 8 in one slide
   spaceBetween: 31,
   freeMode: true,
+  loop: true,
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
