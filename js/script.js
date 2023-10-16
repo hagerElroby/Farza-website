@@ -41,7 +41,7 @@ var slider1 = new Swiper(".slider-onee .mySwiper", {
 // add i add the navigation for this slider
 var slider2 = new Swiper(".slider-two .mySwiper", {
   slidesPerView: 1,    // this code that let the slides be 8 in one slide
-  spaceBetween: 31,
+  spaceBetween: 10,
   freeMode: true,
 
   autoplay: {
