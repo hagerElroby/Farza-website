@@ -1,980 +1,395 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Farza Company</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="csrf-token" content="{{ csrf_token() }}" />
-
-    <!-- Favicons -->
-    <link href="img/Farza.png" rel="icon" />
-    <link href="img/Farza.png" rel="apple-touch-icon" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" />
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.12/sweetalert2.min.css" />
-    <link rel="stylesheet" href="fontawesome/arrow-up-from-bracket-solid.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="Css/sheet.css" rel="stylesheet" />
-    <link href="Css/navbar.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Foodies website by Bootstrap 5" />
+  <title>Foodies</title>
+  <link rel="icon" href="images/logo.png">
+  <!-- bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+ 
+  <!-- OWN CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive-style.css">
 </head>
 
 <body>
-    <!-- start top navbar  -->
-    <div class="top-navbar">
-        <div class="lang">
-            <span>English</span> <i class="fa-solid fa-globe"></i></i>
-        </div>
-        <button type="button" class="btn position-relative btn1 fw-bold"  id="" onclick="contact()">
-            contact us
+  <!-- header design -->
+  <header>
+    <nav class="navbar navbar-expand-lg navigation-wrap">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img decoding="async" src="images/logo.png"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-stream navbar-toggler-icon"></i>
         </button>
-        <div class="border p-4 dropdown-menu shadow-lg p-3 mb-5 bg-body-tertiary rounded address" id="contact1" style="display: none;">
-            <span> <b>Address:</b> ٤٢ شارع البطراوي المتفرع من شارع  عباس العقاد - مدينه نصر - عند كوبرى البطراوى بجوار كوستا كافيه             -الممر اللى اوله محل بيت العطارة </span><br>
-            <span> <b>Email:</b> hr.farza2022@gmail.com</span><br>
-            <span> <b>Phone:</b> 0224037986 </span><br>
-            <span> <b>WhatsApp:</b> +201555578007 </span><br>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#explore-food">Explore Foods</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonial">Reviews</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#faq">FAQ</a>
+            </li>
+            <li><button class="main-btn">1200 345 123</button></li>
+          </ul>
         </div>
-     </div> <!--end top navbar-->
-     
-     <!-- start nav for desktop  -->
-    <nav class="nav-bar  desk-nav">
-        <a class="logo" href="#"><img src="img/Farza.png" class="" /></a>
-        <form class="form-search" action="" method="POST">
-            <input class="input-search" name="search_product" id="search_product" type="search"
-                placeholder="Search for Product or brands" aria-label="Search">
-            <button class="btn-search" style="width: 10%"> <i class="fa-solid fa-magnifying-glass"></i> </button>
-        </form>
-        <div class="navbar-pages">
-            <a class=""  aria-current="page" href="index.html">Home</a>
-            <a class="" aria-current="page" href="all-product.html">All Product</a>
+      </div>
+    </nav>
+  </header>
+   
+  <!-- section-1 top-banner -->
+  <section id="home">
+    <div class="container-fluid px-0 top-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-md-6">
+            <h1>Good food choices are good investments.</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et purus a odio finibus bibendum amet leo.
+            </p>
+            <div class="mt-4">
+              <button class="main-btn">Order now <i class="fas fa-shopping-basket ps-3"></i></button>
+              <button class="white-btn ms-lg-4 mt-lg-0 mt-4">Order now <i class="fas fa-angle-right ps-3"></i></button>
+            </div>
+          </div>
         </div>
-        <div class="navbar-icons">
-            <div class="cart-icons cart-conect me-2">
-                <a href="cart.html">
-                    <i class="fa-solid fa-cart-shopping fa-shake fa-xl"></i>
-                    <span class="cart-count bg-primary ">5</span>
-                </a>
-            </div>
-            <div class="profile-icon"  >
-                <a href="account.html" title="ayman">
-                    <img src="img/user/user.jpg" alt="Profile" class="rounded-circle" style="width:100%; height: 100%;"/>
-                </a>
-            </div>
-                <a href="{{ route('login') }}" class="text-decoration-none m-2 fw-bold" style="color:#0471b3">Login</a>
-            </div>              
-    </nav> <!--End navbar for desk-->
-
-<!--Start Navbar for mobile-->
-<nav class="mobile-nav">
-        <img src="img/Farza.png"  class="img-fluid" alt="Farza Image">
-        <form class="form-search" action="" method="POST">
-            <input class="input-search" name="search_product" id="search_product" type="search"
-                placeholder="Search for Product or brands" aria-label="Search">
-            <button class="btn-search" style="width: 10%"> <i class="fa-solid fa-magnifying-glass"></i> </button>
-        </form>
-        <div class="navbar-icons">
-            <div class="cart-icons cart-conect me-2">
-                <a href="cart.html">
-                    <i class="fa-solid fa-cart-shopping fa-shake fa-xl"></i>
-                    <span class="cart-count bg-primary ">5</span>
-                </a>
-            </div>
-            <div class="profile-icon">
-                <a href="account.html" title="ayman">
-                    <img src="img/user/user.jpg" alt="Profile" class="rounded-circle" style="width:100%; height: 100%;"/>
-                </a>
-            </div>
-            <button class="toggle-menu-btn navbar-toggler fa-xl" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-            aria-expanded="false" aria-label="Toggle navigation">
-                <span class="">
-                    <i class="fa-solid fa-bars text-info"></i>
-                </span>
-            </button>
-            <div class="sidebar-menu">
-                <button class="menu-close" type="button"
-                aria-label="close menu">✕</button>
-                <div class="navbar-nav mb-lg-0">
-                    <div class="nav-item ">
-                        <a class="nav-link active fs-tt"  aria-current="page" href="https://farza.online"><b>Home</b></a>
-                    </div>
-                </div>
-                <hr>
-                <div class="navbar-nav mb-lg-0 w-25 col-12">
-                    <div class="nav-item ">
-                        <a class="nav-link active fs-tt clo-6"  aria-current="page" href="https://farza.online/all_product"><b>All Product</b></a>
-                    </div>
-                </div>
-                <hr> 
-                <div class="m-auto sign" style="display: grid; justify-content:flex-start;">
-                    <a href="{{ route('login') }}" class="text-decoration-none m-2 fw-bold"> 
-                        <i class="fa-solid fa-arrow-right-to-bracket"></i> Sign in</a>
-                        <a href="{{ route('register') }}"
-                        class="text-decoration-none m-2 fw-bold"><i class="fa-solid fa-user-plus"></i> Signup</a>
-                </div>
-            </div>
+      </div>
     </div>
-</nav> 
+  </section>
 
- <!-- //////////////////////////////////////////////////////////////// -->
-
-    <!-- Start Main -->
-    <main>
-        <!-- Start Slider One -->
-        <section >
-            <div class="slider-onee">
-                <div class="container">
-                    <div class="swiper mySwiper">
-                        <div class="swiper-wrapper w-100">
-                            <div class="swiper-slide">
-                                <img src="img/slider.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/slider.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/slider.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/slider.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/slider.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/slider.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/slider.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/slider.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/slider.png" alt="">
-                            </div>
-                        </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>
-        </section> <!--end slider one-->
-
-        <!-- Start Slider 2 -->
-         <section >
-                <div class="slider-two">
-                    <div class="container" >
-                        <div class="swiper mySwiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide card">
-                                    <div class="card-img">
-                                        <img src="img/Products/2023-07-16_4.jpg" alt="">
-                                    </div>
-                                    <div class="card-text">
-                                        <p class="text-danger">Everyday Deals</p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide card">
-                                    <div class="card-img">
-                                        <img src="img/Products/2023-07-18_6568default-5.jpg" alt="">
-                                    </div>
-                                    <div class="card-text">
-                                        <p>Wearables</p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide card">
-                                    <div class="card-img">
-                                        <img src="img/Products/2023-07-16_4.jpg" alt="">
-                                    </div>
-                                    <div class="card-text">
-                                        <p>Mother’s Day Sale</p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide card">
-                                    <div class="card-img">
-                                        <img src="img/Products/2023-07-18_5202default-11.jpg" alt="">
-                                    </div>
-                                    <div class="card-text">
-                                        <p>Wearables</p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide card">
-                                    <div class="card-img">
-                                        <img src="img/Products/2023-07-16_4.jpg" alt="">
-                                    </div>
-                                    <div class="card-text">
-                                        <p>Laptops & PCs</p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide card">
-                                    <div class="card-img">
-                                        <img src="img/Products/2023-07-18_3086default-8.jpg" alt="">
-                                    </div>
-                                    <div class="card-text">
-                                        <p>Televisions</p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide card">
-                                    <div class="card-img">
-                                        <img src="img/Products/2023-07-16_4.jpg" alt="">
-                                    </div>
-                                    <div class="card-text">
-                                        <p>Mobiles</p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide card">
-                                    <div class="card-img">
-                                        <img src="img/Products/2023-07-18_2706default-10.jpg" alt="">
-                                    </div>
-                                    <div class="card-text">
-                                        <p>Small home appliances</p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide card">
-                                    <div class="card-img">
-                                        <img src="img/Products/2023-07-16_4.jpg" alt="">
-                                    </div>
-                                    <div class="card-text">
-                                        <p>Wearables</p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide card">
-                                    <div class="card-img">
-                                        <img src="img/Products/2023-07-18_2581default-1.jpg" alt="">
-                                    </div>
-                                    <div class="card-text">
-                                        <p>Mother’s Day Sale</p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide card">
-                                    <div class="card-img">
-                                        <img src="img/Products/2023-07-16_4.jpg" alt="">
-                                    </div>
-                                    <div class="card-text">
-                                        <p>Mother’s Day Sale</p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide card">
-                                    <div class="card-img">
-                                        <img src="img/Products/2023-07-18_2059default-7.jpg" alt="">
-                                    </div>
-                                    <div class="card-text">
-                                        <p>Laptops & PCs</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                    </div>
-                </div>
-            </section> <!-- End Slider Two -->
-
-        <!-- Start Slider Three -->
-        <section>
-            <div class="slider3">
-                <div class="container">
-                    <div class="slider3-container">
-                        <div class="content">
-                            <h2>Ramadan offers</h2>
-                            <!-- {{-- <button class="btn btn-light"><b>Shop now</b></button> --}} -->
-                        </div>
-                        <div class="swiper mySwiper ">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}">
-                                        <div class="card-img pb-4">
-                                            <img src="img/Products/2023-07-16_3.jpg" alt="Image">
-                                        </div>
-                                        <!-- {{-- <div class="card-text"> --}} -->
-                                        <h6> <B>Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5</B> </h6>
-                                    </a>
-                                    <p><B>2500 EGP</B></p>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}">
-                                        <div class="card-img pb-4">
-                                            <img src="img/Products/2023-07-16_2.jpg " alt="Image">
-                                        </div>
-                                        <!-- {{-- <div class="card-text"> --}} -->
-                                        <h6> <B>Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5</B> </h6>
-                                    </a>
-                                    <h6><B>2000 EGP </B> </h6>
-                                    <span>(Discount:5%) <del>2500 EGP</del> </span>
-                                     <span class="m-2 badge rounded-pill text-bg-danger stock">Out of stock</span>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}">
-                                        <div class="card-img pb-4">
-                                            <img src="img/Products/2023-07-16_1.jpg" alt="Image">
-                                        </div>
-                                        <!-- {{-- <div class="card-text"> --}} -->
-                                        <h6> <B>Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5</B> </h6>
-                                    </a>
-                                    <p><B>2500 EGP</B></p>
-                                    <h6><B>2000 EGP </B> </h6>
-                                    <span >(Discount:5%) <del>2500 EGP</del> </span>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}">
-                                        <div class="card-img pb-4">
-                                            <img src="img/Products/2023-07-16_3.jpg" alt="Image">
-                                        </div>
-                                        <!-- {{-- <div class="card-text"> --}} -->
-                                        <h6> <B>Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5</B> </h6>
-                                    </a>
-                                    <p ><B>2500 EGP</B></p>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}">
-                                        <div class="card-img pb-4">
-                                            <img src="img/Products/2023-07-16_2.jpg " alt="Image">
-                                        </div>
-                                        <!-- {{-- <div class="card-text"> --}} -->
-                                        <h6> <B>Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5</B> </h6>
-                                    </a>
-                                    <h6><B>2000 EGP </B> </h6>
-                                    <span >(Discount:5%) <del>2500 EGP</del> </span>
-                                     <span class="m-2 badge rounded-pill text-bg-danger stock">Out of stock</span>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}">
-                                        <div class="card-img pb-4">
-                                            <img src="img/Products/2023-07-16_1.jpg" alt="Image">
-                                        </div>
-                                        <!-- {{-- <div class="card-text"> --}} -->
-                                        <h6> <B>Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5</B> </h6>
-                                    </a>
-                                    <p><B>2500 EGP</B></p>
-                                    <h6><B>2000 EGP </B> </h6>
-                                    <span>(Discount:5%) <del>2500 EGP</del> </span>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}">
-                                        <div class="card-img pb-4">
-                                            <img src="img/Products/2023-07-16_3.jpg" alt="Image">
-                                        </div>
-                                        <!-- {{-- <div class="card-text"> --}} -->
-                                        <h6> <B>Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5</B> </h6>
-                                    </a>
-                                    <p><B>2500 EGP</B></p>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}">
-                                        <div class="card-img pb-4">
-                                            <img src="img/Products/2023-07-16_2.jpg " alt="Image">
-                                        </div>
-                                        <!-- {{-- <div class="card-text"> --}} -->
-                                        <h6> <B>Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5</B> </h6>
-                                    </a>
-                                    <h6><B>2000 EGP </B> </h6>
-                                    <span>(Discount:5%) <del>2500 EGP</del> </span>
-                                    <span class="m-2 badge rounded-pill text-bg-danger stock">Out of stock</span>
-                                </div>
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> <!-- End Slider Three -->
-
-        <!--Start Slider 4 Products -->
-        <section>
-            <div class="slider4">
-                <div class="container" >
-                    <div class="slider4-container">
-                        <div class="titleSection">
-                            <h2>Products</h2>
-                        </div>
-                        <div class="swiper mySwiper ">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}">
-                                        <div class="card-img pb-4">
-                                            <img src="img/Products/2023-07-16_3.jpg" alt="Image">
-                                        </div>
-                                        <!-- {{-- <div class="card-text"> --}} -->
-                                        <h6> <B>Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5</B> </h6>
-                                    </a>
-                                    <p><B>2500 EGP</B></p>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}">
-                                        <div class="card-img pb-4">
-                                            <img src="img/Products/2023-07-16_2.jpg " alt="Image">
-                                        </div>
-                                        <!-- {{-- <div class="card-text"> --}} -->
-                                        <h6> <B>Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5</B> </h6>
-                                    </a>
-                                    <h6><B>2000 EGP </B> </h6>
-                                    <span>(Discount:5%) <del>2500 EGP</del> </span>
-                                     <span class="m-2 badge rounded-pill text-bg-danger stock">Out of stock</span>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}">
-                                        <div class="card-img pb-4">
-                                            <img src="img/Products/2023-07-16_1.jpg" alt="Image">
-                                        </div>
-                                        <!-- {{-- <div class="card-text"> --}} -->
-                                        <h6> <B>Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5</B> </h6>
-                                    </a>
-                                    <p><B>2500 EGP</B></p>
-                                    <h6><B>2000 EGP </B> </h6>
-                                    <span >(Discount:5%) <del>2500 EGP</del> </span>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}">
-                                        <div class="card-img pb-4">
-                                            <img src="img/Products/2023-07-16_3.jpg" alt="Image">
-                                        </div>
-                                        <!-- {{-- <div class="card-text"> --}} -->
-                                        <h6> <B>Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5</B> </h6>
-                                    </a>
-                                    <p ><B>2500 EGP</B></p>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}">
-                                        <div class="card-img pb-4">
-                                            <img src="img/Products/2023-07-16_2.jpg " alt="Image">
-                                        </div>
-                                        <!-- {{-- <div class="card-text"> --}} -->
-                                        <h6> <B>Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5</B> </h6>
-                                    </a>
-                                    <h6><B>2000 EGP </B> </h6>
-                                    <span >(Discount:5%) <del>2500 EGP</del> </span>
-                                     <span class="m-2 badge rounded-pill text-bg-danger stock">Out of stock</span>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}">
-                                        <div class="card-img pb-4">
-                                            <img src="img/Products/2023-07-16_1.jpg" alt="Image">
-                                        </div>
-                                        <!-- {{-- <div class="card-text"> --}} -->
-                                        <h6> <B>Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5</B> </h6>
-                                    </a>
-                                    <p><B>2500 EGP</B></p>
-                                    <h6><B>2000 EGP </B> </h6>
-                                    <span>(Discount:5%) <del>2500 EGP</del> </span>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}">
-                                        <div class="card-img pb-4">
-                                            <img src="img/Products/2023-07-16_3.jpg" alt="Image">
-                                        </div>
-                                        <!-- {{-- <div class="card-text"> --}} -->
-                                        <h6> <B>Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5</B> </h6>
-                                    </a>
-                                    <p><B>2500 EGP</B></p>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}">
-                                        <div class="card-img pb-4">
-                                            <img src="img/Products/2023-07-16_2.jpg " alt="Image">
-                                        </div>
-                                        <!-- {{-- <div class="card-text"> --}} -->
-                                        <h6> <B>Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5</B> </h6>
-                                    </a>
-                                    <h6><B>2000 EGP </B> </h6>
-                                    <span>(Discount:5%) <del>2500 EGP</del> </span>
-                                    <span class="m-2 badge rounded-pill text-bg-danger stock">Out of stock</span>
-                                </div>
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                    </div>
-                </div>
-        </section> <!-- End tSlider 4 -->
-
-        <!-- Start Slider 5 Best Seller -->
-        <section>
-            <div class="slider5">
-                <div class="container">
-                    <div class="slider5-container" >
-                        <div>
-                            <h2>Best Seller</h2>
-                        </div>
-                        <div class="swiper mySwiper swiper-5">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide card">
-                                    <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}">
-                                        <div>
-                                            <img src="img/Products/2023-07-16_4.jpg " alt="Image">
-                                        </div>
-                                          <div class="layer-content">
-                                            <div class="layer-info">
-                                                <h6 class="product-name">Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5 </h6>
-                                                <h6 class="product-price">2000 EGP </h6>
-                                                <div class="sale">
-                                                    <span class="product-discount">(Discount:5%) <del>2500 EGP</del> </span>
-                                                    <span class="m-2 badge rounded-pill text-bg-danger stock">Out of stock</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide card">
-                                    <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}">
-                                        <div>
-                                            <img src="img/Products/2023-07-18_486app-3.jpg" alt="Image">
-                                        </div>
-                                        <div class="layer-content">
-                                            <div class="layer-info">
-                                                <h6 class="product-name">Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5 </h6>
-                                                <h6 class="product-price">2000 EGP </h6>
-                                                <div class="sale">
-                                                    <span class="product-discount">(Discount:5%) <del>2500 EGP</del> </span>
-                                                    <span class="m-2 badge rounded-pill text-bg-danger stock">Out of stock</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                      </a>
-                                </div>
-                                <div class="swiper-slide card">
-                                    <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}">
-                                        <div>
-                                            <img src="img/Products/2023-07-18_3086default-8.jpg " alt="Image">
-                                        </div>
-                                        <div class="layer-content">
-                                            <div class="layer-info">
-                                                <h6 class="product-name">Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5 </h6>
-                                                <h6 class="product-price">2000 EGP </h6>
-                                                <div class="sale">
-                                                    <span class="product-discount">(Discount:5%) <del>2500 EGP</del> </span>
-                                                    <span class="m-2 badge rounded-pill text-bg-danger stock">Out of stock</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a> 
-                                </div>
-                                <div class="swiper-slide card">
-                                    <a href="{{url('view_product/' . Crypt::encryptString($prod->id))}}">
-                                        <div>
-                                            <img src="img/Products/2023-07-18_741default-5.jpg " alt="Image">
-                                        </div>
-                                        <div class="layer-content">
-                                            <div class="layer-info">
-                                                <h6 class="product-name">Open Box - كبة <br> سوكانى - Size: 2.5 x 3.5 </h6>
-                                                <h6 class="product-price">2000 EGP </h6>
-                                                <div class="sale">
-                                                    <span class="product-discount">(Discount:5%) <del>2500 EGP</del> </span>
-                                                    <span class="m-2 badge rounded-pill text-bg-danger stock">Out of stock</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </section> <!-- End Slider 5 -->
-
-        <!-- why Farza  -->
-        <section class="wrapp my-4">
-            <div class="container wrap">
-                <h2 class="mt-4 ms-3">Why Farza</h2>
-                <div class="myImages py-4">
-                    <img class="img-fluid" src="img/why-farza/2023-07-20_2921_Screenshot 2023-07-20 073700.png" alt="">
-                    <img class="img-fluid" src="img/why-farza/2023-07-20_3814_Screenshot 2023-07-20 073728.png" alt="">
-                    <img class="img-fluid" src="img/why-farza/2023-07-20_5968_Screenshot 2023-07-20 073602.png" alt="">
-                </div>
-            </div>
-        </section><!-- end -->
-
-        <!-- {{-- <section>
-                <div class="slider7">
-                    <div class="container">
-                        <div class="slider7-container">
-                            <div class="titleSection">
-                                <p><b>منتجات اخترنهالك</b></p>
-                            </div>
-                            <div class="swiper mySwiper swiper-7">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide card">
-                                        <div class="card-img">
-                                            <img src="image/nnn.png" alt="">
-                                        </div>
-                                        <div class="card-text">
-                                            <p> Tornado Countertop Blender With 2 Mills, 1.5 Liter, 250 Watt, White - MX900/2</p>
-                                            <span><B>16,146.00EGP</B></span>
-                                            <P>
-                                                <B>or from 32 EGP/mo</B>
-                                            </P>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card">
-                                        <div class="card-img">
-                                            <img src="image/nnnn.png" alt="">
-                                        </div>
-                                        <div class="card-text">
-                                            <p> Tornado Countertop Blender With 2 Mills, 1.5 Liter, 250 Watt, White - MX900/2</p>
-                                            <span><B>16,146.00EGP</B></span>
-                                            <P>
-                                                <B>or from 32 EGP/mo</B>
-                                            </P>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card">
-                                        <div class="card-img">
-                                            <img src="image/nnnnn.png" alt="">
-    
-                                        </div>
-                                        <div class="card-text">
-                                            <p> Tornado Countertop Blender With 2 Mills, 1.5 Liter, 250 Watt, White - MX900/2</p>
-                                            <span><B>16,146.00EGP</B></span>
-                                            <P>
-                                                <B>or from 32 EGP/mo</B>
-                                            </P>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card">
-                                        <div class="card-img">
-    
-                                            <img src="image/nnnnnnnn.png" alt="">
-                                        </div>
-                                        <div class="card-text">
-                                            <p> Tornado Countertop Blender With 2 Mills, 1.5 Liter, 250 Watt, White - MX900/2</p>
-                                            <span><B>16,146.00EGP</B></span>
-                                            <P>
-                                                <B>or from 32 EGP/mo</B>
-                                            </P>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card">
-                                        <div class="card-img">
-    
-                                            <img src="image/nnnnnnnnnnnnnnnnnnn.png" alt="">
-                                        </div>
-                                        <div class="card-text">
-                                            <p> Tornado Countertop Blender With 2 Mills, 1.5 Liter, 250 Watt, White - MX900/2</p>
-                                            <span><B>16,146.00EGP</B></span>
-                                            <P>
-                                                <B>or from 32 EGP/mo</B>
-                                            </P>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card">
-                                        <div class="card-img">
-    
-                                            <img src="image/dddddd.png" alt="">
-                                        </div>
-                                        <div class="card-text">
-                                            <p> Tornado Countertop Blender With 2 Mills, 1.5 Liter, 250 Watt, White - MX900/2</p>
-                                            <span><B>16,146.00EGP</B></span>
-                                            <P>
-                                                <B>or from 32 EGP/mo</B>
-                                            </P>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card">
-                                        <div class="card-img">
-    
-                                            <img src="image/tt-black.png" alt="">
-                                        </div>
-                                        <div class="card-text">
-                                            <p> Tornado Countertop Blender With 2 Mills, 1.5 Liter, 250 Watt, White - MX900/2</p>
-                                            <span><B>16,146.00EGP</B></span>
-                                            <P>
-                                                <B>or from 32 EGP/mo</B>
-                                            </P>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card">
-                                        <div class="card-img">
-    
-                                            <img src="image/tt-black.png" alt="">
-                                        </div>
-                                        <div class="card-text">
-                                            <p> Tornado Countertop Blender With 2 Mills, 1.5 Liter, 250 Watt, White - MX900/2</p>
-                                            <span><B>16,146.00EGP</B></span>
-                                            <P>
-                                                <B>or from 32 EGP/mo</B>
-                                            </P>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card">
-                                        <div class="card-img">
-    
-                                            <img src="image/tt-black.png" alt="">
-                                        </div>
-                                        <div class="card-text">
-                                            <p> Tornado Countertop Blender With 2 Mills, 1.5 Liter, 250 Watt, White - MX900/2</p>
-                                            <span><B>16,146.00EGP</B></span>
-                                            <P>
-                                                <B>or from 32 EGP/mo</B>
-                                            </P>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card">
-                                        <div class="card-img">
-    
-                                            <img src="image/tt-black.png" alt="">
-                                        </div>
-                                        <div class="card-text">
-                                            <p> Tornado Countertop Blender With 2 Mills, 1.5 Liter, 250 Watt, White - MX900/2</p>
-                                            <span><B>16,146.00EGP</B></span>
-                                            <P>
-                                                <B>or from 32 EGP/mo</B>
-                                            </P>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card">
-                                        <div class="card-img">
-    
-                                            <img src="image/tt-black.png" alt="">
-                                        </div>
-                                        <div class="card-text">
-                                            <p> Tornado Countertop Blender With 2 Mills, 1.5 Liter, 250 Watt, White - MX900/2</p>
-                                            <span><B>16,146.00EGP</B></span>
-                                            <P>
-                                                <B>or from 32 EGP/mo</B>
-                                            </P>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card">
-                                        <div class="card-img">
-    
-                                            <img src="image/tt-black.png" alt="">
-                                        </div>
-                                        <div class="card-text">
-                                            <p> Tornado Countertop Blender With 2 Mills, 1.5 Liter, 250 Watt, White - MX900/2</p>
-                                            <span><B>16,146.00EGP</B></span>
-                                            <P>
-                                                <B>or from 32 EGP/mo</B>
-                                            </P>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card">
-                                        <div class="card-img">
-    
-                                            <img src="image/tt-black.png" alt="">
-                                        </div>
-                                        <div class="card-text">
-                                            <p> Tornado Countertop Blender With 2 Mills, 1.5 Liter, 250 Watt, White - MX900/2</p>
-                                            <span><B>16,146.00EGP</B></span>
-                                            <P>
-                                                <B>or from 32 EGP/mo</B>
-                                            </P>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card">
-                                        <div class="card-img">
-    
-                                            <img src="image/tt-black.png" alt="">
-                                        </div>
-                                        <div class="card-text">
-                                            <p> Tornado Countertop Blender With 2 Mills, 1.5 Liter, 250 Watt, White - MX900/2</p>
-                                            <span><B>16,146.00EGP</B></span>
-                                            <P>
-                                                <B>or from 32 EGP/mo</B>
-                                            </P>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card">
-                                        <div class="card-img">
-    
-                                            <img src="image/tt-black.png" alt="">
-                                        </div>
-                                        <div class="card-text">
-                                            <p> Tornado Countertop Blender With 2 Mills, 1.5 Liter, 250 Watt, White - MX900/2</p>
-                                            <span><B>16,146.00EGP</B></span>
-                                            <P>
-                                                <B>or from 32 EGP/mo</B>
-                                            </P>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
-                            </div>
-                        </div>
-            </section> --}} -->
-    </main>
-
-
-<!-- Start  Footer -->
-    <footer>
-        <div class="footer-full">
-            <div class="container">
-                <!-- Start Top Footer -->
-                <div class="top-footer">
-                        <div class="phone" >
-                            <h3>Call Us</h3>
-                            <div>
-                                <div class="content1">
-                                    <i class="fas fa-phone"></i>
-                                        <span>
-                                            <a href="tel:{{$set->phone}}">012123456789</a>
-                                        </span>
-                                </div>
-                                <div class="content1 ">
-                                    <i class="fa-brands fa-whatsapp"></i>
-                                        <span>
-                                            <p>012123456789</p>
-                                        </span>
-                                </div>
-                            </div>
-                    </div>
-                <div class="box">
-                   <div class="brand">
-                        <h3>Brands</h3>
-                        <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla </a></p>
-                        <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla </a></p>
-                        <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla </a></p>
-                        <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla </a></p>
-                   </div>
-                    <div class="term">
-                        <h3>Terms & Conditions</h3>
-                    <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla</a></p>
-                    <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla</a></p>
-                    <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla</a></p>
-                    <p><a href="{{url('view-page/' . Crypt::encryptString($pages->id))}}">pla pla</a></p>
-                    </div>
-                    <div class="about">
-                        <h3>About Farza</h3>
-                        <p><a class="" aria-current="page" href="about.html">About Us</a></p>
-                    </div>
-                </div>
-                </div> <!-- End Top Footer -->
-                <hr style="color:#fff !important;">
-                <br>
-                 <!-- Start Bottom Footer -->
-                <div class="bottom-footer">
-                    <div class="box">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6906.215135123466!2d31.336308!3d30.062450999999996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fe62cadc78f%3A0x76e65d3198d12a8f!2z2YHYsdiy2Kkg2YTYqtis2KfYsdipINin2YTYo9is2YfYstipINin2YTZg9mH2LHYqNin2KbZitipINin2YTZhdmG2LLZhNmK2KkgRmFyemE!5e0!3m2!1sar!2seg!4v1690468922420!5m2!1sar!2seg"
-                             allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                    <div class="yem">
-                        <form action="{{url('store-contact')}}" method="POST" enctype="multipart/form-data"
-                            class="shadow-sm p-3 mb-5 bg-body rounded">
-                            <h3 class="text-dark"> <strong>Contact Us</strong> </h3>
-                            <p class="text-dark"> send your opinion , comment on the website or anything else
-                            </p>
-                            <div class="mb-3">
-                                <label for="name" class="form-label text-dark">Name</label>
-                                <input type="text" class="form-control" name="name" id="name" value="ayman">
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label text-dark">Email address</label>
-                                <input type="email" class="form-control" id="email" name="email"
-                                    value="ayman@gmail.com">
-                            </div>
-                            <div class="mb-3 textarea">
-                                <label for="massage" class="form-label text-dark">Massage</label>
-                                <textarea class="form-control" id="massage" name="massage" rows="5"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-dark">Send</button>
-                        </form>
-                    </div>
-                </div>  <!-- End Bottom Footer -->
-                <hr>
-                 <!-- Start Copyright -->
-                <div class="copyright pb-3">
-                    <div class="container">
-                        <p>Copyright &copy; 2023 <strong><b>Farza</b></strong> <strong>Inc. </strong></p>
-                        <ul>
-                            <li>
-                                <a href="{{$set->facebook}}" aria-label="Read more about Seminole tax hike"><i
-                                        class="fa-brands fa-facebook fa-xl" style="color: #ffffff;"></i></a>
-                            </li>
-                            <li>
-                                <a href="{{$set->instagram }}" aria-label="Read more about Seminole tax hike"><i
-                                        class="fa-brands fa-square-instagram fa-xl" style="color: #ffffff;"></i></a>
-                            </li>
-                            <li>
-                                <a href="{{$set->youtube }}" aria-label="Read more about Seminole tax hike"><i
-                                        class="fa-brands fa-youtube fa-xl" style="color: #ffffff;"></i></a>
-                            </li>
-                            <li>
-                                <a href="{{$set->linkedin}}" aria-label="Read more about Seminole tax hike"><i
-                                        class="fa-brands fa-linkedin fa-xl" style="color: #ffffff;"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>  <!-- End Copyright -->
-            </div>
+  <!-- section-2 counter -->
+  <section id="counter">
+    <section class="counter-section">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-3 mb-lg-0 mb-md-0 mb-5">
+            <h2>
+              <span id="count1"></span>+
+            </h2>
+            <p>SAVINGS</p>
+          </div>
+          <div class="col-md-3 mb-lg-0 mb-md-0 mb-5">
+            <h2>
+              <span id="count2"></span>+
+            </h2>
+            <p>PHOTOS</p>
+          </div>
+          <div class="col-md-3 mb-lg-0 mb-md-0 mb-5">
+            <h2>
+              <span id="count3"></span>+
+            </h2>
+            <p>ROCKETS</p>
+          </div>
+          <div class="col-md-3 mb-lg-0 mb-md-0 mb-5">
+            <h2>
+              <span id="count4"></span>+
+            </h2>
+            <p>GLOBES</p>
+          </div>
         </div>
-    </footer> <!-- End Footer -->
+      </div>
+    </section>
+  </section>
 
-    <div class="whatsapp-chat">
-        <a href=" https://wa.me/{{$set->whatsapp}}" aria-label="Read more about Seminole tax hike"
-            style="font-size: 50px;">
-            <i class="fa-brands fa-whatsapp fa-beat fa-2xl" style="color: #25d366; font-size: 60px;"></i>
-        </a>
+  <!-- section-3 about-->
+   <section id="about">
+     <div class="about-section wrapper">
+       <div class="container">
+         <div class="row align-items-center">
+           <div class="col-lg-7 col-md-12 mb-lg-0 mb-5">
+             <div class="card border-0">
+               <img decoding="async" src="images/img/img-1.png" class="img-fluid">
+             </div>
+           </div>
+           <div class="col-lg-5 col-md-12 text-sec">
+            <h2>We pride ourselves on making real food from the best ingredients.</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et purus a odio finibus bibendum in sit
+              amet leo. Mauris feugiat erat tellus.</p>
+              <button class="main-btn mt-4">Learn More</button>
+           </div>
+         </div>
+       </div>
+       <div class="container food-type">
+         <div class="row align-items-center">
+           <div class="col-lg-5 col-md-12 text-sec mb-lg-0 mb-5">
+            <h2>We make everything by hand with the best possible ingredients.</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et purus a odio finibus bibendum in sit
+              amet leo. Mauris feugiat erat tellus.Far far away, behind the word mountains, far from the countries
+              Vokalia and Consonantia, there live the blind texts.</p>
+            <ul class="list-unstyled py-3">
+              <li>Etiam sed dolor ac diam volutpat.</li>
+              <li>Erat volutpat aliquet imperdiet.</li>
+              <li>purus a odio finibus bibendum.</li>
+            </ul> 
+            <button class="main-btn mt-4">Learn More</button>
+           </div>
+           <div class="col-lg-7 col-md-12">
+             <div class="card border-0">
+               <img decoding="async" src="images/img/img-2.png" class="img-fluid">
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </section>
+
+  <!-- section-3 story-->
+   <section id="story">
+     <div class="story-section">
+       <div class="container">
+         <div class="row">
+           <div class="col-sm-12">
+             <div class="text-content">
+              <h2>When a man's stomach is full it makes no
+                difference whether he is rich or poor.</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et purus a odio
+                finibus bibendum in sit amet leo. Mauris feugiat erat tellus.</p>
+                <button class="main-btn mt-3">Read More</button>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </section>
+
+  <!-- section-4 explore food-->
+   <section id="explore-food">
+     <div class="explore-food wrapper">
+       <div class="container">
+         <div class="row">
+           <div class="col-sm-12">
+             <div class="text-content text-center">
+              <h2>Explore Our Foods</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et purus a odio finibus bibendum in sit
+                amet leo. Mauris feugiat erat tellus. Far far away, behind the word mountains, far from the countries
+                Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
+             </div>
+           </div>
+         </div>
+         <div class="row pt-5">
+           <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+             <div class="card">
+               <img decoding="async" src="images/img/img-3.jpg" class="img-fluid">
+               <div class="pt-3">
+                <h4>Rainbow Vegetable Sandwich</h4>
+                <p>Time: 15 - 20 Minutes | Serves: 1</p>
+                <span>$10.50 <del>$11.70</del></span>
+                <button class="mt-4 main-btn">Order Now</button>
+              </div>
+             </div>
+           </div>
+           <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+            <div class="card">
+              <img decoding="async" src="images/img/img-4.jpg" class="img-fluid">
+              <div class="pt-3">
+                <h4>Vegetarian Burger</h4>
+                <p>Time: 30 - 45 Minutes | Serves: 1</p>
+                <span>$9.20<del>$10.50</del></span>
+                <button class="mt-4 main-btn">Order Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+            <div class="card">
+              <img decoding="async" src="images/img/img-5.jpg" class="img-fluid">
+              <div class="pt-3">
+                <h4>Raspberry Stuffed French Toast</h4>
+                <p>Time: 10 - 15 Minutes | Serves: 1</p>
+                <span>$12.50<del>$13.20</del></span>
+                <button class="mt-4 main-btn">Order Now</button>
+              </div>
+            </div>
+          </div>
+         </div>
+       </div>
+     </div>
+   </section>
+
+  <!-- Section-5 testimonial-->
+   <section id="testimonial">
+     <div class="wrapper testimonial-section">
+       <div class="container text-center">
+         <div class="text-center pb-4">
+           <h2>Testimonial</h2>
+         </div>
+         <div class="row">
+          <div class="col-sm-12 col-lg-10 offset-lg-1">
+            <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="carousel-caption">
+                    <img decoding="async" src="images/review/review-1.jpg">
+                    <p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                      live the blind texts. "</p>
+                    <h5>Johnthan Doe - UX Designer</h5>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="carousel-caption">
+                    <img decoding="async" src="images/review/review-2.jpg">
+                    <p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                      live the blind texts. "</p>
+                    <h5>Maccy Doe - Front End</h5>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="carousel-caption">
+                    <img decoding="async" src="images/review/review-1.jpg">
+                    <p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                      live the blind texts. "</p>
+                    <h5>Johnthan Doe - UX Designer</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       </div>
+     </div>
+   </section>
+
+  <!-- section-6 faq-->
+   <section id="faq">
+     <div class="faq wrapper">
+       <div class="container">
+         <div class="row">
+           <div class="col-sm-12">
+             <div class="text-center pb-4">
+              <h2>Frequently Asked Questions</h2>
+             </div>
+           </div>
+         </div>
+         <div class="row pt-5">
+           <div class="col-sm-6 mb-4">
+            <h4><span>~</span>Is Foodies Bread really baked fresh each day?</h4>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+              blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language.
+            </p>
+           </div>
+           <div class="col-sm-6 mb-4">
+            <h4><span>~</span>Do you bake breads containing animal fats or products?</h4>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+              blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language.
+            </p>
+           </div>
+           <div class="col-sm-6 mb-4">
+            <h4><span>~</span>Can I order your products online?</h4>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+              blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language.
+            </p>
+           </div>
+           <div class="col-sm-6 mb-4">
+            <h4><span>~</span>When are you opening a shop near me?</h4>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+              blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language.
+            </p>
+           </div>
+         </div>
+       </div>
+     </div>
+   </section>
+
+  <!-- section-7 book-food-->
+   <section id="book-food">
+     <div class="book-food">
+       <div class="container book-food-text">
+         <div class="row text-center">
+           <div class="col-lg-9 col-md-12">
+            <h2>Baked fresh daily by bakers with passion.</h2>
+           </div>
+           <div class="col-lg-3 col-md-12 mt-lg-0 mt-4">
+             <button class="main-btn">Learn more</button>
+           </div>
+         </div>
+       </div>
+     </div>
+   </section>
+
+  <!-- section-8 newslettar-->
+   <section id="newslettar">
+     <div class="newslettar wrapper">
+       <div class="container">
+         <div class="row">
+           <div class="sol-sm-12">
+             <div class="text-content text-center pb-4">
+              <h2>Hurry up! Subscribe our newsletter
+                and get 25% Off</h2>
+              <p>Limited time offer for this month. No credit card required. </p>
+             </div>
+             <form class="newsletter">
+               <div class="row">
+                 <div class="col-md-8 col-12">
+                   <input class="form-control" placeholder="Email Address here" name="email" type="email">
+                 </div>
+                 <div class="col-md-4 col-12">
+                   <button class="main-btn" type="submit">Subscribe</button>
+                 </div>
+               </div>
+             </form>
+           </div>
+         </div>
+       </div>
+     </div>
+   </section>
+
+  <!-- section-9 footer-->
+  <footer id="footer">
+    <div class="footer py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <a class="footer-link" href="#">Register</a>
+            <a class="footer-link" href="#">Forum</a>
+            <a class="footer-link" href="#">Affiliate</a>
+            <a class="footer-link" href="#">FAQ</a>
+            <div class="footer-social pt-4 text-center">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-dribbble"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="footer-copy">
+              <div class="copy-right text-center pt-5">
+                <p class="text-light">&copy; 2023. Foodies. All rights reserved.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </footer>
+   
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.12/sweetalert2.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
-    <script src="js/cart.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/script1.js"></script>
-    <script src="js/script3.js"></script>
-    <script src="js/script5.js"></script>
-    <script src="js/nav.js"></script>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K5F9LB4QS1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-K5F9LB4QS1');
-    </script>
-
-    <!-- @yield('script')
-        
-        @if (session('error'))
-        <script>
-        swal("Oops" , "{{session('error')}}" , "error")
-        </script>
-        @endif
-        
-        @if (session('status'))
-        <script>
-        swal("Good job!" , "{{session('status')}}" , "success")
-        </script>
-        @endif -->
-
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <script>
-        var availableTags = [];
-        $.ajax({
-            method: "GET",
-            url: "/product_search",
-            success: function (response) {
-                // console.log(response);
-                startAutoComplrte(response);
-            }
-        });
-        function startAutoComplrte(availableTags) {
-
-            $("#search_product").autocomplete({
-                source: availableTags
-            });
-        }
-    </script>
-
-
+  <!-- JS Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
+  <!-- own js -->
+  <script src="js/main.js"></script>
 </body>
-
 </html>
+
